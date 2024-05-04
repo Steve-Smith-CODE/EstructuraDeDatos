@@ -20,7 +20,6 @@
 
 
 
-
 ////Console.WriteLine("====Distancia===");
 //Declarar variables
 //double d, v, t;
