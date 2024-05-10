@@ -185,136 +185,144 @@
 //    Console.Write(i + " ");
 //}
 
-Console.WriteLine("SUMA Y MULTIPLICACIÓN DE MATRICES");
-Console.WriteLine("\n");
 
-//MATRIZZ [1]
-Console.WriteLine("➤ Matriz A");
-Console.WriteLine("Digite Nº de Filas: ");
-int f1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Digite Nº de Columnas: ");
-int c1 = int.Parse(Console.ReadLine());
-Console.WriteLine("\n");
 
-//MATRIZZ [2]
-Console.WriteLine("➤ Matriz B");
-Console.WriteLine("Digite Nº de Filas: ");
-int f2 = int.Parse(Console.ReadLine());
-Console.WriteLine("Digite Nº de Columnas: ");
-int c2 = int.Parse(Console.ReadLine());
 
-//DECLARACION
-//filas y columnas +1 para comenzar desde posición 1
-int[,] MatrizA = new int[f1 + 1, c1 + 1];
-int[,] MatrizB = new int[f2 + 1, c2 + 1];
-int[,] Multi = new int[f1 + 1, c2 + 1];
-int[,] Suma = new int[f1 + 1, c2 + 1];
-Console.WriteLine("\n");
 
-//Llenar matriz A
-Console.WriteLine("Matriz A: ");
-for (int i = 1; i <= f1; i++)
-{
-    for (int j = 1; j <= c1; j++)
-    {
-        Console.WriteLine("Digite número 《 Fila: {0} - Columna: {1} 》: ", i, j);
-        MatrizA[i, j] = int.Parse(Console.ReadLine());
-    }
-}
-Console.WriteLine("\n");
 
-//Llenar matriz B
-Console.WriteLine("Matriz B: ");
-for (int i = 1; i <= f2; i++)
-{
-    for (int j = 1; j <= c2; j++)
-    {
-        Console.WriteLine("Digite número 《 Fila: {0} - Columna: {1} 》: ", i, j);
-        MatrizB[i, j] = int.Parse(Console.ReadLine());
-    }
-}
-Console.WriteLine("\n");
-//Condiciones 1 Suma 2 Multi
-Console.WriteLine("Elige una opción.");
-Console.WriteLine("1- Suma");
-Console.WriteLine("2- Multiplicación");
-Console.WriteLine("Seleccione una opción: ");
 
-switch (Console.Read())
-{
-    case '1':
-        Console.WriteLine("Suma...");
-        Console.WriteLine("\n");
-        //Si la matrices tiene el mismo tamaño, la misma cantidad de columnas y de filas.            
-        if (c1 == c2 && f1 == f2)
-        {
-            //Sumar
-            for (int i = 1; i <= f1; i++)
-            {
-                for (int j = 1; j <= c2; j++)
-                {
-                    Suma[i, j] = MatrizA[i, j] + MatrizB[i, j];//Operación
-                }
-            }
 
-            Console.WriteLine("La suma de las dos matriz es: ");
-            for (int i = 1; i <= f1; i++)
-            {
-                Console.Write("\n");
-                for (int j = 1; j <= c2; j++)
-                {
-                    Console.Write("{0}    ", Suma[i, j]); //Muestra la matriz resultante
-                }
-            }
-        }
-        //Si la matrices NO tiene el mismo tamaño, la misma cantidad de columnas y de filas. 
-        else
-        {
-            Console.WriteLine("Error: Para sumar matrices deben tener el mismo tamaño, la misma cantidad de columnas y de filas." + " Columnas: {0}! = Filas: {1}", c1, f2);
-        }
-        Console.WriteLine("\n");
-        Console.Read();
-        break;
-    case '2':
-        Console.WriteLine("Multiplicación...");
-        Console.WriteLine("\n");
-        //Si el número de columnas de la primera matriz debe coincidir con el número de filas de la segunda matriz.
-        if (c1 == f2)
-        {
-            //Multiplicando las 2 matrices 
-            for (int i = 1; i <= f1; i++)
-            {
-                for (int j = 1; j <= c2; j++)
-                {
-                    Multi[i, j] = 0;
-                    for (int x = 1; x <= c1; x++)
-                    {
-                        Multi[i, j] = MatrizA[i, x] * MatrizB[x, j] + Multi[i, j]; //Operación
-                    }
-                }
-            }
 
-            Console.WriteLine("\n");
-            Console.WriteLine("Multiplicación de matrices:");
-            Console.WriteLine("\n");
-            for (int i = 1; i <= f1; i++)
-            {
-                for (int j = 1; j <= c2; j++)
-                {
-                    Console.Write("{0}    ", Multi[i, j]); //Muestra la matriz resultante
-                }
-                Console.WriteLine();
-            }
-        }
-        //Si el número de columnas de la primera matriz NO coincide con el número de filas de la segunda matriz. 
-        else
-        {
-            Console.WriteLine("Error: Para multiplicar el número de columnas de la primera matriz debe coincidir con el número de filas de la segunda matriz." + " Columnas: {0}! = Filas: {1}", c1, f2);
-        }
-        Console.WriteLine("\n");
-        Console.Read();
-        break;
-}
+//Console.WriteLine("SUMA Y MULTIPLICACIÓN DE MATRICES");
+//Console.WriteLine("\n");
+
+////MATRIZZ [1]
+//Console.WriteLine("➤ Matriz A");
+//Console.WriteLine("Digite Nº de Filas: ");
+//int f1 = int.Parse(Console.ReadLine());
+//Console.WriteLine("Digite Nº de Columnas: ");
+//int c1 = int.Parse(Console.ReadLine());
+//Console.WriteLine("\n");
+
+////MATRIZZ [2]
+//Console.WriteLine("➤ Matriz B");
+//Console.WriteLine("Digite Nº de Filas: ");
+//int f2 = int.Parse(Console.ReadLine());
+//Console.WriteLine("Digite Nº de Columnas: ");
+//int c2 = int.Parse(Console.ReadLine());
+
+////DECLARACION
+////filas y columnas +1 para comenzar desde posición 1
+//int[,] MatrizA = new int[f1 + 1, c1 + 1];
+//int[,] MatrizB = new int[f2 + 1, c2 + 1];
+//int[,] Multi = new int[f1 + 1, c2 + 1];
+//int[,] Suma = new int[f1 + 1, c2 + 1];
+//Console.WriteLine("\n");
+
+////Llenar matriz A
+//Console.WriteLine("Matriz A: ");
+//for (int i = 1; i <= f1; i++)
+//{
+//    for (int j = 1; j <= c1; j++)
+//    {
+//        Console.WriteLine("Digite número 《 Fila: {0} - Columna: {1} 》: ", i, j);
+//        MatrizA[i, j] = int.Parse(Console.ReadLine());
+//    }
+//}
+//Console.WriteLine("\n");
+
+////Llenar matriz B
+//Console.WriteLine("Matriz B: ");
+//for (int i = 1; i <= f2; i++)
+//{
+//    for (int j = 1; j <= c2; j++)
+//    {
+//        Console.WriteLine("Digite número 《 Fila: {0} - Columna: {1} 》: ", i, j);
+//        MatrizB[i, j] = int.Parse(Console.ReadLine());
+//    }
+//}
+//Console.WriteLine("\n");
+////Condiciones 1 Suma 2 Multi
+//Console.WriteLine("Elige una opción.");
+//Console.WriteLine("1- Suma");
+//Console.WriteLine("2- Multiplicación");
+//Console.WriteLine("Seleccione una opción: ");
+
+//switch (Console.Read())
+//{
+//    case '1':
+//        Console.WriteLine("Suma...");
+//        Console.WriteLine("\n");
+//        //Si la matrices tiene el mismo tamaño, la misma cantidad de columnas y de filas.            
+//        if (c1 == c2 && f1 == f2)
+//        {
+//            //Sumar
+//            for (int i = 1; i <= f1; i++)
+//            {
+//                for (int j = 1; j <= c2; j++)
+//                {
+//                    Suma[i, j] = MatrizA[i, j] + MatrizB[i, j];//Operación
+//                }
+//            }
+
+//            Console.WriteLine("La suma de las dos matriz es: ");
+//            for (int i = 1; i <= f1; i++)
+//            {
+//                Console.Write("\n");
+//                for (int j = 1; j <= c2; j++)
+//                {
+//                    Console.Write("{0}    ", Suma[i, j]); //Muestra la matriz resultante
+//                }
+//            }
+//        }
+//        //Si la matrices NO tiene el mismo tamaño, la misma cantidad de columnas y de filas. 
+//        else
+//        {
+//            Console.WriteLine("Error: Para sumar matrices deben tener el mismo tamaño, la misma cantidad de columnas y de filas." + " Columnas: {0}! = Filas: {1}", c1, f2);
+//        }
+//        Console.WriteLine("\n");
+//        Console.Read();
+//        break;
+//    case '2':
+//        Console.WriteLine("Multiplicación...");
+//        Console.WriteLine("\n");
+//        //Si el número de columnas de la primera matriz debe coincidir con el número de filas de la segunda matriz.
+//        if (c1 == f2)
+//        {
+//            //Multiplicando las 2 matrices 
+//            for (int i = 1; i <= f1; i++)
+//            {
+//                for (int j = 1; j <= c2; j++)
+//                {
+//                    Multi[i, j] = 0;
+//                    for (int x = 1; x <= c1; x++)
+//                    {
+//                        Multi[i, j] = MatrizA[i, x] * MatrizB[x, j] + Multi[i, j]; //Operación
+//                    }
+//                }
+//            }
+
+//            Console.WriteLine("\n");
+//            Console.WriteLine("Multiplicación de matrices:");
+//            Console.WriteLine("\n");
+//            for (int i = 1; i <= f1; i++)
+//            {
+//                for (int j = 1; j <= c2; j++)
+//                {
+//                    Console.Write("{0}    ", Multi[i, j]); //Muestra la matriz resultante
+//                }
+//                Console.WriteLine();
+//            }
+//        }
+//        //Si el número de columnas de la primera matriz NO coincide con el número de filas de la segunda matriz. 
+//        else
+//        {
+//            Console.WriteLine("Error: Para multiplicar el número de columnas de la primera matriz debe coincidir con el número de filas de la segunda matriz." + " Columnas: {0}! = Filas: {1}", c1, f2);
+//        }
+//        Console.WriteLine("\n");
+//        Console.Read();
+//        break;
+//}
 
 
 
