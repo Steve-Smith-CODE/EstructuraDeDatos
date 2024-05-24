@@ -1,9 +1,9 @@
-namespace Laboratorio7
+namespace Laboratorio07
 {
-    public partial class frmPlanilla : Form
+    public partial class Form1 : Form
     {
         Empleado empleado;
-        public frmPlanilla()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -14,7 +14,7 @@ namespace Laboratorio7
             cboArea.SelectedIndex = 0;
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click(object sender, EventArgs e)//Crear código
         {
             string codigo = txtCodigo.Text;
             string nombre = txtNombre.Text;
@@ -28,21 +28,22 @@ namespace Laboratorio7
 
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
+        private void btnMostrar_Click(object sender, EventArgs e)//Mostrar información
         {
             txtResultado.AppendText("Objeto Nro: " + Empleado.GetContador().ToString() + Environment.NewLine);
-            txtResultado.AppendText("Codigo: " + empleado.Codigo + Environment.NewLine);
+            txtResultado.AppendText("Código: " + empleado.Codigo + Environment.NewLine);
             txtResultado.AppendText("Nombre: " + empleado.Nombre + Environment.NewLine);
             txtResultado.AppendText("Seguro: " + empleado.TipoSeguro + Environment.NewLine);
             txtResultado.AppendText("Sueldo: " + empleado.SueldoBase + Environment.NewLine);
             txtResultado.AppendText("Horas Extras: " + empleado.HorasExtras + Environment.NewLine);
-            txtResultado.AppendText("Area: " + empleado.Area + Environment.NewLine);
+            txtResultado.AppendText("Área: " + empleado.Area + Environment.NewLine);
             txtResultado.AppendText("Monto Extra: " + empleado.CalcularHorasExtras() + Environment.NewLine);
             txtResultado.AppendText("Monto Seguro: " + empleado.CalcularMontoSeguro() + Environment.NewLine);
             txtResultado.AppendText("Monto Essalud: " + empleado.CalcularMontoEssalud() + Environment.NewLine);
             txtResultado.AppendText("Monto Descuento: " + empleado.CalularDescuento() + Environment.NewLine);
             txtResultado.AppendText("Sueldo Bruto: " + empleado.SueldoBruto() + Environment.NewLine);
             txtResultado.AppendText("Sueldo Neto: " + empleado.SueldoNeto() + Environment.NewLine);
+
 
         }
 
@@ -57,14 +58,14 @@ namespace Laboratorio7
 
         }
 
-        private void InitializeComponent()
-        {
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtResultado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
