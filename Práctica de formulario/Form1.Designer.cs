@@ -60,6 +60,7 @@
             // 
             // txtCodigo
             // 
+            txtCodigo.BackColor = SystemColors.Control;
             txtCodigo.Location = new Point(23, 32);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(125, 27);
@@ -76,6 +77,7 @@
             // 
             // txtNombres
             // 
+            txtNombres.BackColor = SystemColors.Control;
             txtNombres.Location = new Point(23, 85);
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(125, 27);
@@ -92,13 +94,13 @@
             // 
             // cboContrato
             // 
+            cboContrato.BackColor = SystemColors.Info;
             cboContrato.FormattingEnabled = true;
             cboContrato.Items.AddRange(new object[] { "Estable", "Contratado" });
             cboContrato.Location = new Point(506, 32);
             cboContrato.Name = "cboContrato";
             cboContrato.Size = new Size(191, 28);
             cboContrato.TabIndex = 7;
-            cboContrato.Text = "Estable";
             // 
             // label5
             // 
@@ -111,13 +113,13 @@
             // 
             // cboEspecialidad
             // 
+            cboEspecialidad.BackColor = SystemColors.Info;
             cboEspecialidad.FormattingEnabled = true;
             cboEspecialidad.Items.AddRange(new object[] { "Estructuras", "Recursos Hídricos" });
             cboEspecialidad.Location = new Point(507, 85);
             cboEspecialidad.Name = "cboEspecialidad";
             cboEspecialidad.Size = new Size(190, 28);
             cboEspecialidad.TabIndex = 9;
-            cboEspecialidad.Text = "Estructuras";
             // 
             // label6
             // 
@@ -130,13 +132,13 @@
             // 
             // cboSupervision
             // 
+            cboSupervision.BackColor = SystemColors.Info;
             cboSupervision.FormattingEnabled = true;
             cboSupervision.Items.AddRange(new object[] { "Superivisión de Obras", "Supervisión de Vías" });
-            cboSupervision.Location = new Point(505, 139);
+            cboSupervision.Location = new Point(508, 139);
             cboSupervision.Name = "cboSupervision";
-            cboSupervision.Size = new Size(192, 28);
+            cboSupervision.Size = new Size(189, 28);
             cboSupervision.TabIndex = 11;
-            cboSupervision.Text = "Superivisión de Obras";
             // 
             // label7
             // 
@@ -149,16 +151,17 @@
             // 
             // cboAfiliacion
             // 
+            cboAfiliacion.BackColor = SystemColors.Info;
             cboAfiliacion.FormattingEnabled = true;
             cboAfiliacion.Items.AddRange(new object[] { "AFP", "SNP" });
             cboAfiliacion.Location = new Point(505, 193);
             cboAfiliacion.Name = "cboAfiliacion";
             cboAfiliacion.Size = new Size(192, 28);
             cboAfiliacion.TabIndex = 13;
-            cboAfiliacion.Text = "AFP";
             // 
             // txtResultado
             // 
+            txtResultado.BackColor = SystemColors.InactiveBorder;
             txtResultado.Location = new Point(23, 227);
             txtResultado.Multiline = true;
             txtResultado.Name = "txtResultado";
@@ -168,46 +171,55 @@
             // 
             // btnCrear
             // 
+            btnCrear.BackColor = SystemColors.ActiveCaption;
+            btnCrear.ForeColor = SystemColors.Highlight;
             btnCrear.Location = new Point(28, 407);
             btnCrear.Name = "btnCrear";
             btnCrear.Size = new Size(120, 29);
             btnCrear.TabIndex = 15;
             btnCrear.Text = "Crear Objeto";
-            btnCrear.UseVisualStyleBackColor = true;
+            btnCrear.UseVisualStyleBackColor = false;
             btnCrear.Click += btnCrear_Click;
             // 
             // btnMostrar
             // 
+            btnMostrar.BackColor = SystemColors.ActiveCaption;
+            btnMostrar.ForeColor = SystemColors.Highlight;
             btnMostrar.Location = new Point(170, 407);
             btnMostrar.Name = "btnMostrar";
             btnMostrar.Size = new Size(202, 29);
             btnMostrar.TabIndex = 16;
             btnMostrar.Text = "Mostrar Información";
-            btnMostrar.UseVisualStyleBackColor = true;
+            btnMostrar.UseVisualStyleBackColor = false;
             btnMostrar.Click += btnMostrar_Click;
             // 
             // btnLimpiar
             // 
+            btnLimpiar.BackColor = SystemColors.ActiveCaption;
+            btnLimpiar.ForeColor = SystemColors.Highlight;
             btnLimpiar.Location = new Point(405, 407);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(127, 29);
             btnLimpiar.TabIndex = 17;
             btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnSalir
             // 
+            btnSalir.BackColor = SystemColors.ActiveCaption;
+            btnSalir.ForeColor = SystemColors.Highlight;
             btnSalir.Location = new Point(603, 407);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
             btnSalir.TabIndex = 18;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // txtSueldo
             // 
+            txtSueldo.BackColor = SystemColors.Control;
             txtSueldo.Location = new Point(23, 138);
             txtSueldo.Name = "txtSueldo";
             txtSueldo.Size = new Size(125, 27);
